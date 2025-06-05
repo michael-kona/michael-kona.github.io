@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>Michael's Calculator</title>
+        <style type="text/css">
+           
+        </style>
+        <script type="text/javascript">
+            var f1,f2,op;
+            function getbtnclick(a)
+            {
+                if(a=='+'|| a=='-'||a=='*'||a=='/')
+                   {
+                    f1=parseInt(document.getElementById('txt_value').value);
+                    document.getElementById('txt_value').value=null;
+                    op=a;
+                   }
+                else if(a=='=')
+                {
+                    f2=parseInt(document.getElementById('txt_value').value);
+                    document.getElementById('txt_value').value=null;
+                    switch(op)
+                    {
+                        case '+': document.getElementById('txt_value').value=f1+f2;
+                                    break;
+                        case '-': document.getElementById('txt_value').value=f1-f2;
+                                    break;
+                        case '*': document.getElementById('txt_value').value=f1*f2;
+                                    break;
+                        case '/': document.getElementById('txt_value').value=f1/f2;
+                                    break;
+                    }
+                }
+                else{
+                document.getElementById('txt_value').value=document.getElementById('txt_value').value+a;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-image: url('bg5.jpg');background-repeat: no-repeat;background-position: center;">
+        <table style="position: fixed;left: 550px;top:150px;border-style: double;">
+            <caption style="font-family: Bookman Old Style;font-size: x-large;">Michael's Calculator</caption>
+            <tr>
+                <td colspan="4">
+                    <input type="text" id="txt_value" name="txt_value" width="30"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="7" id="btn_7" name="btn_7" onclick="getbtnclick(7)"/>
+                </td>
+                <td>
+                    <input type="button" value="8" id="btn_8" name="btn_8" onclick="getbtnclick(8)"/>
+                </td>
+                <td>
+                    <input type="button" value="9" id="btn_9" name="btn_9" onclick="getbtnclick(9)"/>
+                </td>
+                <td>
+                    <input type="button" value="+" id="btn_plus" name="btn_plus" onclick="getbtnclick('+')"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="4" id="btn_4" name="btn_4" onclick="getbtnclick(4)"/>
+                </td>
+                <td>
+                    <input type="button" value="5" id="btn_5" name="btn_5" onclick="getbtnclick(5)"/>
+                </td>
+                <td>
+                    <input type="button" value="6" id="btn_6" name="btn_6" onclick="getbtnclick(6)"/>
+                </td>
+                <td>
+                    <input type="button" value="-" id="btn_minus" name="btn_minus" onclick="getbtnclick('-')"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="1" id="btn_1" name="btn_1" onclick="getbtnclick(1)"/>
+                </td>
+                <td>
+                    <input type="button" value="2" id="btn_2" name="btn_2" onclick="getbtnclick(2)"/>
+                </td>
+                <td>
+                    <input type="button" value="3" id="btn_3" name="btn_3" onclick="getbtnclick(3)"/>
+                </td>
+                <td>
+                    <input type="button" value="*" id="btn_mul" name="btn_mul" onclick="getbtnclick('*')"/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="0" id="btn_0" name="btn_0" onclick="getbtnclick(0)"/>
+                </td>
+                <td>
+                    <input type="button" value="." id="btn_dot" name="btn_dot" onclick="getbtnclick('.')"/>
+                </td>
+                <td>
+                    <input type="button" value="/" id="btn_div" name="btn_div" onclick="getbtnclick('/')"/>
+                </td>
+                <td>
+                    <input type="button" value="=" id="btn_equal" name="btn_equal" onclick="getbtnclick('=')"/>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
