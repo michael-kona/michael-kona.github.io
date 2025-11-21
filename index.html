@@ -1,61 +1,188 @@
-<html>
-    <head>
-        <title>Michael's Portfolio</title>
-        <style type="text/css">
-            ul{
-              color:white;
-              list-style-type: none;  
-              font-size: x-large;
-              background-color: blueviolet;
-              text-align: right;
-            }
-            li
-            {
-               display: inline; 
-               margin: 7px;
-            }
-            input
-            {
-                color: white;
-                font-size: x-large;
-                font-family: Broadway;
-                background-color: blue;
-                position: fixed;
-                top:350px;
-                left: 100px;;
-                border-style: dotted;
-                border-width: 2pt;
-                border-radius: 30%;
-            }
-            img.a
-            {
-                position: fixed;
-                left:600px;
-                top: 150px;
-                border-radius: 50%;
-            }
-        </style>
-    </head>
-    <body style="background-image: url('bg4.jpg');">
-        <ul>
-            <li>Home</li>
-            <li>Education</li>
-            <li>Experience</li>
-            <li>Certifications</li>
-            <li><a href="projects.html">Projects</a></li>
-            <li>Contact</li>
-        </ul>
-       <p style="color: white;font-family: Bernard MT;position: fixed;top: 200px;left:100px"> Hi, Hello I'm <b style="font-size: xx-large;color:chartreuse">Michael S.R.K</b><br>
-        <br>Assistant Professor in CSE<br>
-        Prasad V Potluri Siddhartha Institute of Technology<br>
-        Kanuru, Vijayawada - 520007.
-        </p>
-        <input type="button" value="About Me"/>
-        <img class="a" src="mic_avatar_tie.png" width="200" height="200"/>
-        <a href="https://www.linkedin.com/in/michael-sadgun-rao-kona-6275684/"> <img src="linkedin.svg" width="40" height="40" style="position: fixed;left: 100px;top:400px;" /></a>
-        <a href="https://github.com/michael-kona"><img src="github.svg" width="40" height="40" style="position: fixed;left: 150px;top:400px;" /></a>
-        <a href="https://x.com/michael_kona"><img src="twitter.png" width="40" height="40" style="position: fixed;left: 200px;top:400px;" /></a>
-        <a href="#"><img src="telegram.png" width="40" height="40" style="position: fixed;left: 250px;top:400px;" /></a>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael S. R. Kona — Portfolio</title>
+  <meta name="description" content="Faculty profile / portfolio of Michael Sadgun Rao Kona — Assistant Professor, M.Tech (Software Engineering)." />
+  <style>
+    :root{
+      --accent:#0b76d1;
+      --muted:#6b7280;
+      --card:#ffffff;
+      --bg:#f5f7fb;
+      --max-width:1000px;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    html,body{height:100%;margin:0;background:var(--bg);color:#111827}
+    .wrap{max-width:var(--max-width);margin:32px auto;padding:24px}
+    header{display:flex;gap:20px;align-items:center}
+    .photo{width:160px;height:160px;border-radius:12px;background:linear-gradient(135deg,#e6eef9,#ffffff);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--muted);overflow:hidden;box-shadow:0 6px 18px rgba(12,38,63,0.08)}
+    .photo img{width:100%;height:100%;object-fit:cover}
+    h1{margin:0;font-size:28px}
+    h2{margin:0;font-size:18px;color:var(--accent)}
+    .headline{display:flex;flex-direction:column}
+    .meta{margin-top:8px;color:var(--muted);font-size:14px}
 
-    </body>
+    .grid{display:grid;grid-template-columns:1fr 320px;gap:24px;margin-top:22px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,38,63,0.06)}
+    .section{margin-bottom:18px}
+    .section h3{margin:0 0 8px 0;font-size:16px}
+    ul{margin:0;padding-left:18px}
+    table{width:100%;border-collapse:collapse}
+    td,th{padding:8px;border-bottom:1px solid #eef2f7;font-size:14px}
+    .small{font-size:13px;color:var(--muted)}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#eef6ff;padding:6px 10px;border-radius:999px;font-size:13px;color:var(--accent)}
+
+    footer{margin-top:26px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .photo{width:120px;height:120px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="photo" aria-hidden>
+        <!-- Replace with actual photo by editing the <img> src -->
+        <img src="Michael SRK_Passport_photo_Nov 2025.jpeg" alt="Michael Sadgun Rao Kona">
+      </div>
+      <div class="headline">
+        <h1>Michael Sadgun Rao Kona</h1>
+        <h2>Assistant Professor — M.Tech (Software Engineering)</h2>
+        <div class="meta">Teaching Experience: 7+ Years • Research: Cloud Computing, Data Science, Smart City & IoT</div>
+        <div class="meta small" style="margin-top:8px">DOB: 07-04-1984 • Location: Vijayawada / Gannavaram, Andhra Pradesh</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <main>
+        <div class="card section">
+          <h3>About</h3>
+          <p class="small">Assistant Professor with an M.Tech in Software Engineering and a B.Tech in IT. Areas of interest and research include Cloud Computing, Data Science, Smart City applications and IoT. Experienced in teaching undergraduate and postgraduate courses and conducting workshops and faculty development programmes.</p>
+        </div>
+
+        <div class="card section">
+          <h3>Experience</h3>
+          <table aria-label="Experience table">
+            <thead>
+              <tr><th>Organization</th><th>Designation</th><th>Duration</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>PVPSIT, Vijayawada</td><td>Assistant Professor</td><td>August 2022 — Present</td></tr>
+              <tr><td>Lakireddy Bali Reddy College of Engineering, Mylavaram</td><td>Sr. Assistant Professor / Assistant Professor</td><td>June 2015 — July 2022</td></tr>
+              <tr><td>Sri Vahini Institute of Science and Technology</td><td>Assistant Professor</td><td>May 2012 — November 2012</td></tr>
+              <tr><td>NICT Computer Education, Bangalore</td><td>Software Trainer</td><td>May 2007 — March 2012</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card section">
+          <h3>Education</h3>
+          <table aria-label="Education table">
+            <tbody>
+              <tr><td>Ph.D.</td><td class="small">—</td></tr>
+              <tr><td>M.Tech (Software Engineering)</td><td class="small">LBRCE, Mylavaram — JNTUK (2012–2014) — SGPA 3.33/4.00 (83.4%)</td></tr>
+              <tr><td>B.Tech (CSIT)</td><td class="small">Gayatri Vidya Parishad College Of Engineering, Visakhapatnam — JNTU Hyderabad (2002–2006) — 66.40%</td></tr>
+              <tr><td>Inter (M.P.C)</td><td class="small">Sri Kakatiya Junior College, Vijayawada — BIE (2000–2002) — 85.6%</td></tr>
+              <tr><td>SSC (10th)</td><td class="small">Sri Mallikarjuna Public School — 2000 — 76.6%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card section">
+          <h3>Teaching Subjects & Courses</h3>
+          <ul>
+            <li>Data Warehousing & Data Mining; Data Mining using Python</li>
+            <li>Introduction to Database; Programming for Problem Solving using C</li>
+            <li>Android Application Development; Web Technologies; Cloud Computing</li>
+            <li>Data Structures (C); OOP (Java); Operating Systems; Software Engineering</li>
+            <li>Linux Programming; Operating System Principles</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Selected Certifications</h3>
+          <ul>
+            <li>NPTEL: Data Analytics with Python — IIT Roorkee (Jan–Apr 2022) — Elite (64%)</li>
+            <li>Coursera: Programming for Everybody (Python) — University of Michigan (June 2020)</li>
+            <li>NPTEL: Data Mining — IIT Kharagpur (Feb–Apr 2019) — Elite (65%)</li>
+            <li>NPTEL: Cloud Computing — IIT Kharagpur (Feb–Mar 2018) — Elite (70%)</li>
+            <li>AICTE FDP: Foundation Program in ICT for Education — IIT Bombay (Mar–Apr 2018)</li>
+          </ul>
+        </div>
+
+        <div class="card section">
+          <h3>Workshops, FDPs & Conferences</h3>
+          <p class="small">Attended multiple AICTE/ATAL and NPTEL FDPs on topics such as IoT, Blockchain, Data Sciences and Web Development. Participated in ICCIDE-2017 (Springer conference) and several STTP/Faculty Development Programmes on Python and Data Structures.</p>
+        </div>
+
+        <div class="card section">
+          <h3>Workshops Conducted & Administrative Roles</h3>
+          <ul>
+            <li>Organized/Coordinated "Expert Talk on SDLC & Latest Emerging Trends in Software Industry" under TECDA club</li>
+            <li>Workshop coordinator — Two Day Workshop on Digital Marketing (30–31 Aug 2018)</li>
+            <li>Department Coordinator — CIIE (Center for Innovation Incubation & Entrepreneurship)</li>
+            <li>Time Table Coordinator (2017–2022) and Department Discipline In-charge (2017–2021)</li>
+          </ul>
+        </div>
+
+      </main>
+
+      <aside>
+        <div class="card section">
+          <h3>Contact</h3>
+          <p class="small"><strong>Present Address</strong><br>
+          Flat No. - G2, Capitol Hill Residency, Beside Cranberry Supermarket, Sri Nagar Colony, Gannavaram, Krishna, A.P. - 521101.<br>
+          Phone: <a href="tel:+918466011006">8466011006</a>, <a href="tel:+919642433351">9642433351</a><br>
+          Email: <a href="mailto:michael.kona@gmail.com">michael.kona@gmail.com</a></p>
+
+          <p class="small"><strong>Permanent Address</strong><br>
+          D.No : 7-129/2, Near C.I. Office, Vijayawada Road, H.Junction-521105</p>
+
+          <p class="small"><strong>Online</strong><br>
+          Blog: <a href="http://michaelkona.blogspot.com" target="_blank" rel="noopener">michaelkona.blogspot.com</a><br>
+          YouTube: <a href="http://www.youtube.com/c/michaelkona" target="_blank" rel="noopener">youtube.com/c/michaelkona</a></p>
+        </div>
+
+        <div class="card section">
+          <h3>Skills & Interests</h3>
+          <div class="skills">
+            <span class="chip">Cloud Computing</span>
+            <span class="chip">Data Science</span>
+            <span class="chip">IoT</span>
+            <span class="chip">Python</span>
+            <span class="chip">Java</span>
+            <span class="chip">Android</span>
+            <span class="chip">Web Dev</span>
+            <span class="chip">Teaching</span>
+          </div>
+        </div>
+
+        <div class="card section">
+          <h3>Professional Memberships</h3>
+          <p class="small">Life Member of CSI (L1503231), Life Member of ISTE (LM129169)</p>
+        </div>
+
+        <div class="card section">
+          <h3>Quick Facts</h3>
+          <ul>
+            <li>DOB: 07-04-1984</li>
+            <li>Marital Status: Married</li>
+            <li>Category: BC-C</li>
+          </ul>
+        </div>
+
+      </aside>
+    </div>
+
+    <footer>
+      <div class="small">Generated from provided CV / biodata. Edit this file to replace the placeholder photo, tweak content and add documents or publications.</div>
+    </footer>
+  </div>
+</body>
 </html>
